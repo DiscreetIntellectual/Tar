@@ -1,0 +1,6 @@
+***src/test/f1.txt***2***
+Aww, shoes, here we go again
+Worst place in the world - Roller Heights, Ballas County
+***src/test/f2.txt***2***
+See you around...
+Officer.
