@@ -8,15 +8,14 @@ public class TarSplit {
         try {
             List<String> allLines = Files.readAllLines(Paths.get(sourcePath));
             String name;
-            BufferedWriter output = new BufferedWriter(new FileWriter("src/test/safezone/safefile.txt"));
+            BufferedWriter output = null;
             int count = 0;
             for (String line: allLines) {
                 if (count == 0) {
-                    output.close();
+                    if (output != null) output.close();
                     String[] schism = line.split("\\*\\*\\*");
                     name = schism[1];
                     int length = Integer.parseInt(schism[2]);
-                    new File(name).createNewFile();
                     output = new BufferedWriter(new FileWriter(name));
                     count = length;
                 }
